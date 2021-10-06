@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 04:37:34 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/04 10:14:10 by tbousque         ###   ########.fr       */
+/*   Created: 2021/10/05 11:50:20 by tbousque          #+#    #+#             */
+/*   Updated: 2021/10/05 22:26:06 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	while (*(unsigned char *)s++ != (unsigned char) c && n > 0);
-	printf("n: %lu\n", n);
-	if (!n)
-		return (NULL);
-	return ((void *) --s);
-}
-
-#include <string.h>
-int main(void)
-{
-    char    str[16] = "https://LOL.com";
-
-    char *nstr = (char *)ft_memchr(str, 'm', 16 * sizeof(char));
-	if (!nstr)
-		printf("NULL");
+	char *d;
+	const char *s;
+	
+	d = dest;
+	s = src;
+	if (dest < src)
+	{
+		while (n > 0)
+		{
+			*d++ = *s++;
+			n--;
+		}
+	}
 	else
-    	printf("%s\n", nstr);
-    return (0);
+	{
+		while (n > 0)
+		{
+			n--;
+			d[n] = s[n];
+		}
+	}
+	return (dest);
 }
