@@ -23,14 +23,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-int	main(void)
-{
-	size_t lenght = 8 * 2;
-	char src[16] = "Hello World";
-	char dest[16];
-	//memmove(src+4, src, lenght); // HellHello World
-	memmove(dest, src, lenght);
-	printf("%s", dest);
-	
-}

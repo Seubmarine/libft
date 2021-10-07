@@ -12,25 +12,10 @@
 
 #include "libft.h"
 
-#include <stdio.h>
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (*(unsigned char *)s++ != (unsigned char) c && n > 0);
-	printf("n: %lu\n", n);
 	if (!n)
 		return (NULL);
 	return ((void *) --s);
-}
-
-#include <string.h>
-int main(void)
-{
-    char    str[16] = "https://LOL.com";
-
-    char *nstr = (char *)ft_memchr(str, 'm', 16 * sizeof(char));
-	if (!nstr)
-		printf("NULL");
-	else
-    	printf("%s\n", nstr);
-    return (0);
 }

@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsd/string.h"
 #include "libft.h"
 #include "stdio.h"
 
@@ -23,25 +22,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i++] = src[i];
 	dst[i] = '\0';
 	return (ft_strlen(src));
-}
-
-#define MAX_PATH_LEN 0
-int main(void)
-{
-	size_t len;
-	char path[MAX_PATH_LEN];
-	char *homedir = "/home/seub/libft";
-
-	len = strlcpy(path, homedir, 0);
-	printf("cpy len = %lu\n", len);
-	//if (len >= sizeof(path))
-	//	return (1); //error
-	len = strlcat(path, "/", sizeof(path));
-	//if (len >= sizeof(path))
-	//	return (1); //error
-	len = strlcat(path, ".foorc", sizeof(path));
-	//if (len >= sizeof(path))
-	//	return (1); //error
-	//printf("%s\n", path);
-	return (0);
 }
