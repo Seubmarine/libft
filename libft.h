@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 23:46:59 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/05 22:19:30 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/07 17:36:06 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stddef.h>
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_isupper(int c);
+int	ft_islower(int c);
 int	ft_isascii(int c);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
