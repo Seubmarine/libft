@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 23:46:59 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/11 12:27:36 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/15 00:10:06 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int ft_strncmp(const char *str1, const char *str2, size_t n);
 int	ft_atoi(const char *s);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif
