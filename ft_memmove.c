@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:50:20 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/05 22:26:06 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:25:39 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *d;
-	const char *s;
-	
+	char		*d;
+	const char	*s;
+
 	d = dest;
 	s = src;
 	if (dest == NULL && src == NULL)

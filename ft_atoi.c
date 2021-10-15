@@ -6,11 +6,11 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:31:32 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/06 22:05:40 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/15 00:05:05 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {

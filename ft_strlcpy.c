@@ -6,16 +6,15 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 11:20:22 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/06 19:03:54 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:20:19 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	if (size == 0)
 		return (ft_strlen(src));

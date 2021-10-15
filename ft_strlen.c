@@ -6,10 +6,12 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:35:49 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/04 11:38:26 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:18:30 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
+
 size_t	ft_strlen(const char *s)
 {
 	const char	*s_ptr;
