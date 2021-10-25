@@ -6,22 +6,25 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:19:27 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/22 23:34:59 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/25 02:09:35 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (n / 10)
-		ft_putnbr_fd(n / 10, fd);
-	char c;
-	c = (n % 10) + '0';
-	write(fd, &c, 1);
-}
+	long	nbr;
+	char	c;
 
-void main(void)
-{
-	ft_putnbr_fd(-2147483647, 1);
+	nbr = n;
+	if (nbr < 0)
+	{
+		write(fd, "-", 1);
+		nbr = -nbr;
+	}
+	if (nbr / 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	c = (nbr % 10) + '0';
+	write(fd, &c, 1);
 }
