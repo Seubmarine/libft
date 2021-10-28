@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 17:24:14 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/22 16:54:13 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:01:24 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,35 +39,39 @@ static size_t ft_count_word(char const *s, char c)
 
 char **ft_split(char const *s, char c)
 {
-	char **words = malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
+	char **words;
 	size_t start;
 	size_t end;
 	size_t word_i;
 
-	return (NULL);
 	if (s == NULL)
 		return (NULL);
+	words = malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
 	end = 0;
 	word_i = 0;
-	while (s[0] != '\0')
+	words[word_i] = NULL;
+	while (word_i < ft_count_word(s, c))
 	{
 		start = end;
 		while (s[start] && s[start] == c)
 			start++;
-		if (s[start] == '\0')
-			return (words);
 		end = start;
 		while (s[end] && s[end] != c)
 			end++;
 		char *word = ft_substr(s, start, end - start);
+		if (word == NULL)
+			return (NULL);
 		words[word_i++] = word;
 		words[word_i] = NULL;
 	}
+	words[5] = NULL;
 	return (words);
 }
-
-void main(void)
+/*
+int main(void)
 {
-	char *s = "  ";
-    char **result = ft_split(s, ' ');
-}
+     char *s = "      split       this for   me  !       ";
+     char **res = ft_split(s, ' ');
+     for (int i = 0; i <= 6; i++)
+         printf("%s", res[i]);
+}*/
