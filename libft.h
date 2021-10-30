@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 23:46:59 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/30 02:02:19 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:49:46 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,5 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // Mine
 int			ft_isset(char c, const char *set);
 long long	ft_abs(long long n);
+char		*ft_ullbase(unsigned long long n, char *base, int radix, int sign);
 #endif
