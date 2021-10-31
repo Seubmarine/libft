@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS = "-Werror"
+CFLAGS = "-Wall -Werror -Wextra"
 
 SRC = *.c
 
