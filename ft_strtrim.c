@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 01:58:05 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/21 03:09:00 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/11/05 19:06:46 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	start = i;
 	i = ft_strlen(s1) - 1;
-	while (ft_isset(s1[i], set) && i >= 0)
+	while (ft_isset(s1[i], set) && (i > 0))
 		i--;
 	end = i;
 	trimedstr = ft_substr(s1, start, end - start + 1);
