@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 23:38:10 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/21 01:52:03 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:12:04 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	str = malloc(sizeof(char) * (s1len + s2len));
+	str = malloc(sizeof(char) * (s1len + s2len + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
