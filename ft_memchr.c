@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 04:37:34 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/15 01:18:04 by tbousque         ###   ########.fr       */
+/*   Updated: 2021/11/24 20:06:18 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (*(unsigned char *)s++ != (unsigned char) c && --n > 0)
-		;
-	if (!n)
-		return (NULL);
-	return ((void *)--s);
+	const unsigned char	*mem;
+	unsigned char		byte;
+
+	mem = s;
+	byte = (unsigned char) c;
+	while (n > 0)
+	{
+		if (*mem == byte)
+			return ((void *)mem);
+		mem++;
+		n--;
+	}
+	return (NULL);
 }
