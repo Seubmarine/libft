@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 22:47:20 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/14 21:13:13 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/14 21:33:40 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 //Create a string converting a number to it's string representaion,
 //negative number won't be converted, -12 won't become 12.
 //radix is size of the base
-//invert will invert n, usefull when n is negative.
-//if sign == 1 add '+', sign == 2 add '-', sign == 3.
 
 char	*ft_ullbase(unsigned long long n, char *base, int radix)
 {
