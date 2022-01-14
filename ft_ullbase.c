@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 22:47:20 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/30 22:48:38 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/14 21:13:13 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 //invert will invert n, usefull when n is negative.
 //if sign == 1 add '+', sign == 2 add '-', sign == 3.
 
-char	*ft_ullbase(unsigned long long n, char *base, int radix, int sign)
+char	*ft_ullbase(unsigned long long n, char *base, int radix)
 {
 	unsigned long long	n_copy;
 	int					len;
 	char				*str;
 
-	len = 1 +(sign > 0);
+	len = 1 ;
 	n_copy = n;
 	while (n_copy / radix)
 	{
@@ -41,7 +41,5 @@ char	*ft_ullbase(unsigned long long n, char *base, int radix, int sign)
 		n /= radix;
 		len--;
 	}
-	if (sign)
-		str[0] = "-+"[sign - 1];
 	return (str);
 }
