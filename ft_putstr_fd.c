@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:09:01 by tbousque          #+#    #+#             */
-/*   Updated: 2021/10/25 02:10:41 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/17 02:31:10 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == NULL)
 		return ;
-	write(fd, s, ft_strlen(s));
+	(void)!write(fd, s, ft_strlen(s));
 }
