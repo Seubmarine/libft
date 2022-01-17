@@ -6,22 +6,23 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 02:39:38 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/14 21:49:36 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/17 01:06:17 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	long	n_long;
+	char	temp_str[12];
 	char	*result;
 
-	str = ft_ullbase(ft_abs(n), "0123456789", 10);
-	if (str == NULL)
-		return (NULL);
-	result = ft_strjoin("-", str);
-	free(str);
-	if (result == NULL)
-		return (NULL);
-	return (str);
+	n_long = n;
+	temp_str[0] = '-';
+	if (n_long < 0)
+		ft_snullbase(temp_str + 1, 11, -n_long, "0123456789");
+	else 
+		ft_snullbase(temp_str, 12, n_long, "0123456789");
+	result = ft_strdup(temp_str);
+	return (result);
 }
