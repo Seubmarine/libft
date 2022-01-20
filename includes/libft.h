@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 23:46:59 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/17 01:03:37 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/20 07:11:34 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char				*ft_strdup(const char *s);
 //Part 2
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t s1len, size_t s2len);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
@@ -84,6 +85,6 @@ int					ft_isset(char c, const char *set);
 long long			ft_abs(long long n);
 int					ft_snullbase(char *dest, size_t dest_size,
 						unsigned long long n, const char *base);
-void				*ft_realoc(void *ptr, size_t size);
+void				*ft_realloc(void *ptr, size_t size, size_t previous_size);
 unsigned long		ft_nextpow2(unsigned long x);
 #endif

@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 20:06:28 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/20 08:46:09 by tbousque         ###   ########.fr       */
+/*   Created: 2021/10/20 23:38:10 by tbousque          #+#    #+#             */
+/*   Updated: 2022/01/20 07:41:01 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include "libft.h"
-# include <stdlib.h>
-# include <unistd.h>
-# include <stddef.h>
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4194304
-# endif
+#include "libft.h"
 
-char	*get_next_line(int fd);
-#endif
+//need length of the two string
+char	*ft_strnjoin(char const *s1, char const *s2, size_t s1len, size_t s2len)
+{
+	size_t	i;
+	char	*str;
+
+	str = malloc(sizeof(char) * (s1len + s2len + 1));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < s1len)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (i - s1len < s2len)
+	{
+		str[i] = s2[i - s1len];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
