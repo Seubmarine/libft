@@ -6,9 +6,11 @@
 #    By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 12:44:46 by tbousque          #+#    #+#              #
-#    Updated: 2022/01/17 17:22:49 by tbousque         ###   ########.fr        #
+#    Updated: 2022/01/20 05:19:09 by tbousque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+INCLUDES		=	-I includes
 
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
@@ -27,7 +29,7 @@ BONUS_OBJS		= $(BONUS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror $(INCLUDES)
 
 NAME			= libft.a
 
