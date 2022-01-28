@@ -6,7 +6,7 @@
 /*   By: tbousque <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 01:02:21 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/17 01:02:55 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/01/28 09:36:39 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_snullbase(char *dest, size_t dest_size, unsigned long long n,
 {
 	char	temp_array[64];
 	int		len;
-	size_t		i;
+	size_t	i;
 	int		radix;
 
 	if (!dest || !base || dest_size == 0)
