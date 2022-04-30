@@ -6,7 +6,7 @@
 #    By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 12:44:46 by tbousque          #+#    #+#              #
-#    Updated: 2022/01/20 08:15:41 by tbousque         ###   ########.fr        #
+#    Updated: 2022/04/30 13:40:57 by tbousque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 					ft_putstr_fd.c  ft_strjoin.c ft_strnjoin.c ft_strmapi.c ft_strtrim.c ft_isspace.c \
 					ft_islower.c ft_isupper.c ft_abs.c ft_snullbase.c ft_isset.c ft_striteri.c \
 					ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c \
-					ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c get_next_line/get_next_line.c
+					ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c get_next_line/get_next_line.c \
+					ft_strtoll.c
 
 OBJS			= $(SRCS:.c=.o)
 

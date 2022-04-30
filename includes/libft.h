@@ -6,7 +6,7 @@
 /*   By: tbousque <tbousque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 23:46:59 by tbousque          #+#    #+#             */
-/*   Updated: 2022/01/28 09:37:49 by tbousque         ###   ########.fr       */
+/*   Updated: 2022/04/29 23:50:45 by tbousque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,5 @@ int					ft_snullbase(char *dest, size_t dest_size,
 						unsigned long long n, const char *base);
 void				*ft_realloc(void *ptr, size_t size, size_t previous_size);
 unsigned long		ft_nextpow2(unsigned long x);
+long long int		ft_strtoll(const char *nptr, char **endptr, int base);
 #endif
